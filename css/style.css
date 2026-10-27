@@ -1,0 +1,178 @@
+/* 1. Keep padding inside the size of each element. */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Use a white background and dark text. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #362624;
+}
+
+/* 3. Use the dark brown colors for my header. */
+header {
+  padding: 40px 20px 28px;
+  text-align: center;
+  background: linear-gradient(135deg, #362624, #5e4542);
+  color: #ffffff;
+}
+
+header p {
+  margin: 12px 0;
+}
+
+/* 4. Make my website name stand out in white. */
+.site-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* 5. Make the menu links look like buttons. */
+nav {
+  margin-top: 24px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 10px 18px;
+  border: 1px solid #d7cfcd;
+  border-radius: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 6. Use peach for the current page and hover color. */
+nav a:hover,
+nav a[aria-current="page"] {
+  background-color: #fdca90;
+  border-color: #fdca90;
+  color: #362624;
+}
+
+/* Show which menu link is selected when using a keyboard. */
+nav a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* 7. Keep the main content centered with space around it. */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 36px 20px 48px;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #362624;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 2.2rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+main > p {
+  max-width: 720px;
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+  color: #5e4542;
+}
+
+/* 8. Give each section a white box with a blue accent. */
+section {
+  margin: 24px 0;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d7cfcd;
+  border-left: 5px solid #4f687f;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(54, 38, 36, 0.08);
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section li {
+  margin: 10px 0;
+}
+
+/* 9. Use slate blue for the links inside my pages. */
+main a {
+  color: #4f687f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+main a:hover {
+  color: #362624;
+}
+
+/* 10. Match the footer to my color palette. */
+footer {
+  padding: 22px;
+  text-align: center;
+  background-color: #362624;
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 11. Adjust the headings and menu for smaller screens. */
+@media (max-width: 600px) {
+  header {
+    padding: 28px 16px;
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 24px 16px 32px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
