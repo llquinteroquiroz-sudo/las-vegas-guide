@@ -1,9 +1,9 @@
-/* 1. Keep padding inside the size of each element. */
+/* 1. I kept padding and borders inside each element's size. */
 * {
   box-sizing: border-box;
 }
 
-/* 2. Use a white background and dark text. */
+/* 2. I used a white background and dark text for my website. */
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,7 +15,7 @@ body {
   color: #362624;
 }
 
-/* 3. Use the dark brown colors for my header. */
+/* 3. I used a dark brown gradient for my header. */
 header {
   padding: 40px 20px 28px;
   text-align: center;
@@ -27,7 +27,7 @@ header p {
   margin: 12px 0;
 }
 
-/* 4. Make my website name stand out in white. */
+/* 4. I made my website name stand out in white. */
 .site-title {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
@@ -37,7 +37,7 @@ header p {
   color: #ffffff;
 }
 
-/* 5. Make the menu links look like buttons. */
+/* 5. I styled my navigation links like rounded buttons. */
 nav {
   margin-top: 24px;
 }
@@ -55,14 +55,18 @@ nav ul {
 nav a {
   display: block;
   padding: 10px 18px;
-  border: 1px solid #d7cfcd;
+  border: 2px solid #d7cfcd;
   border-radius: 24px;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-/* 6. Use peach for the current page and hover color. */
+/* 6. I used peach to highlight the current page and hover effect. */
 nav a:hover,
 nav a[aria-current="page"] {
   background-color: #fdca90;
@@ -70,13 +74,13 @@ nav a[aria-current="page"] {
   color: #362624;
 }
 
-/* Show which menu link is selected when using a keyboard. */
+/* 7. I added an outline to make keyboard navigation easier to see. */
 nav a:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: 3px;
 }
 
-/* 7. Keep the main content centered with space around it. */
+/* 8. I centered my main content and added spacing around it. */
 main {
   flex: 1;
   width: 100%;
@@ -85,6 +89,7 @@ main {
   padding: 36px 20px 48px;
 }
 
+/* 9. I used serif fonts for my headings. */
 h1,
 h2 {
   font-family: Georgia, "Times New Roman", serif;
@@ -98,17 +103,26 @@ h1 {
 
 h2 {
   margin-top: 0;
+  margin-bottom: 16px;
   font-size: 1.5rem;
 }
 
+h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #362624;
+}
+
+/* 10. I styled the introduction under each page title. */
 main > p {
-  max-width: 720px;
+  max-width: 760px;
   margin-bottom: 28px;
   font-size: 1.05rem;
   color: #5e4542;
 }
 
-/* 8. Give each section a white box with a blue accent. */
+/* 11. I made my sections into white boxes with a blue accent. */
 section {
   margin: 24px 0;
   padding: 24px;
@@ -119,15 +133,23 @@ section {
   box-shadow: 0 5px 16px rgba(54, 38, 36, 0.08);
 }
 
+/* 12. I kept lists organized with enough spacing. */
 section ul {
   padding-left: 20px;
+  margin-top: 12px;
 }
 
 section li {
   margin: 10px 0;
 }
 
-/* 9. Use slate blue for the links inside my pages. */
+/* 13. I adjusted spacing for paragraphs inside sections. */
+section p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* 14. I used slate blue for links inside my pages. */
 main a {
   color: #4f687f;
   text-decoration: underline;
@@ -138,7 +160,32 @@ main a:hover {
   color: #362624;
 }
 
-/* 10. Match the footer to my color palette. */
+/* 15. I made my photos responsive without stretching them. */
+figure {
+  margin: 18px 0 24px;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 16. I kept my photo credits smaller than the main text. */
+figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #595961;
+}
+
+/* 17. I made my Home page photo larger so it stands out. */
+.hero-image img {
+  max-width: 800px;
+}
+
+/* 18. I matched my footer with the colors in my header. */
 footer {
   padding: 22px;
   text-align: center;
@@ -148,9 +195,95 @@ footer {
 
 footer p {
   margin: 0;
+  font-weight: bold;
 }
 
-/* 11. Adjust the headings and menu for smaller screens. */
+/* 19. I gave my Food & Dining page a menu-inspired design. */
+.dining-page main {
+  max-width: 950px;
+}
+
+/* 20. I centered the dining title to make it stand out more. */
+.dining-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.dining-page main > p {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+/* 21. I made my dining sections look like menu categories. */
+.dining-page section {
+  padding: 30px 36px;
+  margin: 0;
+  background-color: #ffffff;
+  border: 1px solid #d7cfcd;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* I rounded the top and bottom of my menu. */
+.dining-page section:first-of-type {
+  border-top: 5px solid #362624;
+  border-radius: 12px 12px 0 0;
+}
+
+.dining-page section:last-of-type {
+  border-bottom: 5px solid #362624;
+  border-radius: 0 0 12px 12px;
+}
+
+/* 22. I centered my food categories with a peach line underneath. */
+.dining-page h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 26px;
+}
+
+.dining-page h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  background-color: #fdca90;
+  margin: 12px auto 0;
+}
+
+/* 23. I styled the restaurant names like items on a menu. */
+.dining-page h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  margin-top: 22px;
+  margin-bottom: 6px;
+  color: #362624;
+}
+
+/* 24. I kept restaurant descriptions smaller with extra spacing. */
+.dining-page section p {
+  font-size: 0.95rem;
+  color: #5e4542;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* 25. I centered the seafood picture inside its menu section. */
+.dining-page figure {
+  max-width: 500px;
+  margin: 20px auto 28px;
+}
+
+.dining-page figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 26. I adjusted my website for smaller screens. */
 @media (max-width: 600px) {
   header {
     padding: 28px 16px;
@@ -162,6 +295,7 @@ footer p {
 
   nav ul {
     flex-direction: column;
+    align-items: center;
   }
 
   main {
@@ -172,7 +306,37 @@ footer p {
     font-size: 1.8rem;
   }
 
+  h2 {
+    font-size: 1.35rem;
+  }
+
   section {
     padding: 20px;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  figure img {
+    max-width: 100%;
+  }
+
+  /* I adjusted the menu headings and spacing for smaller screens. */
+  .dining-page h1 {
+    font-size: 2rem;
+  }
+
+  .dining-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .dining-page section {
+    padding: 24px 20px;
+  }
+
+  .dining-page h3 {
+    font-size: 1.1rem;
   }
 }
