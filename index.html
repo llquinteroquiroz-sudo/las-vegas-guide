@@ -2,92 +2,196 @@
 <!-- 1. I set up my page with HTML5 and English. -->
 <html lang="en">
   <head>
-    <!-- 2. I made sure text displays correctly and fits the device's screen width. -->
+    <!-- 2. I made sure my website works on different screen sizes. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 3. I added the title that shows up in the browser tab. -->
+    <!-- 3. I added the title for my browser tab. -->
     <title>Las Vegas, Your Way | Travel Guide</title>
 
-    <!-- 4. I linked my CSS file to style my website. -->
+    <!-- 4. I linked my stylesheet to the page. -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
-    <!-- 5. I included my website name and tagline. -->
+  <body class="home-page">
+    <!-- 5. I kept my Las Vegas photo banner and navigation. -->
     <header>
-      <p class="site-title">Las Vegas, Your Way</p>
-      <p>Delicious food, sweet treats, and a night to remember.</p>
+      <div class="hero-content">
+        <p class="site-title">Las Vegas, Your Way</p>
+        <p class="site-tagline">
+          Delicious food, sweet treats, and a night to remember.
+        </p>
 
-      <!-- 6. I updated my navigation to connect my three pages. -->
-      <nav aria-label="Main navigation">
-        <ul>
-          <!-- This marks Home as the current page. -->
-          <li>
-            <a href="index.html" aria-current="page">Home</a>
-          </li>
-
-          <li>
-            <a href="things-to-do.html">Things to Do &amp; Entertainment</a>
-          </li>
-
-          <li>
-            <a href="dining.html">Food &amp; Dining</a>
-          </li>
-        </ul>
-      </nav>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li>
+              <a href="index.html" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="things-to-do.html"> Things to Do &amp; Entertainment </a>
+            </li>
+            <li>
+              <a href="dining.html">Food &amp; Dining</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- 7. I introduced Las Vegas and who my guide is for. -->
     <main>
-      <h1>Welcome to Las Vegas</h1>
+      <!-- 6. I added a welcome section with more space and a short introduction. -->
+      <div class="home-intro">
+        <p class="eyebrow">WELCOME TO LAS VEGAS</p>
 
-      <!-- 8. I included a Las Vegas Strip photo and credited the photographer. -->
-      <figure class="hero-image">
-        <img
-          src="images/vegas-hero.jpg"
-          alt="Aerial view of the Las Vegas Strip at night with the Bellagio Fountains, High Roller, and illuminated hotels"
-        />
+        <h1>Explore Las Vegas Your Way</h1>
 
-        <figcaption>
-          Photo by
-          <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>
-          on
-          <a
-            href="https://unsplash.com/photos/city-with-lights-turned-on-during-night-time-uxU_jyu9e7U"
-          >
-            Unsplash
-          </a>
-        </figcaption>
-      </figure>
+        <p>
+          Las Vegas has so much to offer, from exciting attractions and
+          nightlife to delicious food and shopping. Whether you're visiting for
+          the first time or looking for something new to try, this guide will
+          help you explore different places around the city. It's especially
+          made for adults 21 and older who want to enjoy everything Las Vegas
+          has to offer.
+        </p>
+      </div>
 
-      <p>
-        This guide is for adults 21 and older who have a little extra money to
-        spend and want to enjoy good food, shopping, shows, and nightlife.
-      </p>
+      <!-- 7. I gave my personal story its own layout with a picture. -->
+      <section class="story-section">
+        <div class="story-text">
+          <p class="eyebrow">THE STORY BEHIND THE GUIDE</p>
 
-      <!-- 9. I updated these links to match my three-page website. -->
-      <section>
-        <h2>Explore the Guide</h2>
+          <h2>Why I Made This Guide</h2>
 
-        <ul>
-          <li>
-            <a href="things-to-do.html">
-              Explore attractions, shows, nightlife, and shopping in Las Vegas.
-            </a>
-          </li>
+          <p>
+            When I first visited Las Vegas, there were so many places I wanted
+            to explore, but I didn't really know where to start. Between all the
+            restaurants, attractions, shopping, and nightlife, everything felt a
+            little overwhelming, especially since I only had a few days to enjoy
+            everything.
+          </p>
 
-          <li>
-            <a href="dining.html">
-              Find places for breakfast, casual meals, desserts, and nicer
-              dinners.
-            </a>
-          </li>
-        </ul>
+          <p>
+            That's why I wanted to create this guide for people who are visiting
+            Las Vegas for the first time. I wanted to share some of the places I
+            enjoyed during my trip, along with other places I didn't get the
+            chance to visit but would still like to try. My goal is to help
+            visitors find different things to do and make planning their trip a
+            little easier.
+          </p>
+        </div>
+
+        <!-- 8. I added a picture from my own Las Vegas trip. -->
+        <figure class="story-image">
+          <img
+            src="images/kikoandivegas.jpg"
+            alt="My boyfriend and me standing together in front of purple hanging lights during our Las Vegas trip"
+          />
+
+          <figcaption>Photo from my personal Las Vegas trip.</figcaption>
+        </figure>
       </section>
+
+      <!-- 9. I added two picture cards to help visitors explore my other pages. -->
+      <section class="featured-section">
+        <div class="featured-heading">
+          <p class="eyebrow">PLAN YOUR TRIP</p>
+
+          <h2>Explore the Guide</h2>
+
+          <p>
+            Whether you're looking for things to do or places to eat, find ideas
+            to help you plan your Las Vegas trip.
+          </p>
+        </div>
+
+        <div class="featured-cards">
+          <!-- 10. I used the Las Vegas welcome sign for my Things to Do card. -->
+          <article class="feature-card">
+            <a class="feature-link" href="things-to-do.html">
+              <div class="feature-image">
+                <img
+                  src="images/things-to-do-homepage.jpg"
+                  alt="Welcome to Fabulous Las Vegas Nevada sign illuminated at night with palm trees"
+                />
+              </div>
+
+              <div class="feature-content">
+                <p class="feature-category">ATTRACTIONS &amp; ENTERTAINMENT</p>
+
+                <h3>Things to Do</h3>
+
+                <p>
+                  Explore attractions, shows, nightlife, and shopping throughout
+                  Las Vegas.
+                </p>
+
+                <span class="feature-action"> Explore Attractions &rarr; </span>
+              </div>
+            </a>
+
+            <p class="feature-credit">
+              Photo by
+              <a
+                href="https://www.pexels.com/photo/iconic-welcome-to-fabulous-las-vegas-sign-at-night-33448109/"
+              >
+                Luana Scorsoni
+              </a>
+              on Pexels
+            </p>
+          </article>
+
+          <!-- 11. I changed my Food & Dining card to a restaurant photo. -->
+          <article class="feature-card">
+            <a class="feature-link" href="dining.html">
+              <div class="feature-image">
+                <img
+                  src="images/food-and-dining-homepage.jpg"
+                  alt="Restaurant booths with colorful seating and skeleton decorations wearing sombreros"
+                />
+              </div>
+
+              <div class="feature-content">
+                <p class="feature-category">FOOD &amp; DINING</p>
+
+                <h3>Find Your Next Meal</h3>
+
+                <p>
+                  Discover casual meals, seafood, desserts, and restaurants for
+                  a special dinner.
+                </p>
+
+                <span class="feature-action"> Explore Dining &rarr; </span>
+              </div>
+            </a>
+
+            <!-- I credited the photographer of my restaurant photo. -->
+            <p class="feature-credit">
+              Photo by
+              <a
+                href="https://www.pexels.com/photo/decoration-of-skeletons-with-hats-sitting-at-a-table-in-a-restaurant-16635697/"
+              >
+                Clément Proust
+              </a>
+              on Pexels
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 12. I kept the photographer credit for my Las Vegas banner. -->
+      <p class="banner-credit">
+        Banner photo by
+        <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>
+        on
+        <a
+          href="https://unsplash.com/photos/city-with-lights-turned-on-during-night-time-uxU_jyu9e7U"
+        >
+          Unsplash
+        </a>
+      </p>
     </main>
 
-    <!-- 10. I added my website name and class at the bottom. -->
+    <!-- 13. I kept the footer consistent with my other pages. -->
     <footer>
       <p>Las Vegas, Your Way | WEB 110</p>
     </footer>

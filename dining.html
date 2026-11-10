@@ -1,155 +1,388 @@
 <!doctype html>
+<!-- 1. I set up my page with HTML5 and English. -->
 <html lang="en">
   <head>
+    <!-- 2. I made sure my website works on different screen sizes. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 3. I added the title for my browser tab. -->
     <title>Food &amp; Dining | Las Vegas, Your Way</title>
+
+    <!-- 4. I linked my stylesheet to the page. -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <!-- I gave my dining page its own style to make it look like a menu. -->
+  <!-- 5. I kept this class so my dining page can have its own menu design. -->
   <body class="dining-page">
     <header>
       <p class="site-title">Las Vegas, Your Way</p>
       <p>Delicious food, sweet treats, and a night to remember.</p>
 
+      <!-- 6. I kept my navigation connected to all three pages. -->
       <nav aria-label="Main navigation">
         <ul>
           <li>
             <a href="index.html">Home</a>
           </li>
-
           <li>
-            <a href="things-to-do.html">Things to Do &amp; Entertainment</a>
+            <a href="things-to-do.html"> Things to Do &amp; Entertainment </a>
           </li>
-
           <li>
-            <a href="dining.html" aria-current="page">Food &amp; Dining</a>
+            <a href="dining.html" aria-current="page"> Food &amp; Dining </a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Food &amp; Dining</h1>
+      <!-- 7. I added an introduction to explain my restaurant recommendations. -->
+      <div class="dining-intro">
+        <p class="eyebrow">EXPLORE THE FLAVORS OF LAS VEGAS</p>
+        <h1>Food &amp; Dining</h1>
 
-      <p>
-        Find a variety of places for breakfast, burgers, seafood, steak,
-        desserts, and dinner with a view.
-      </p>
-
-      <!-- 1. I included Eggslut as a breakfast option. -->
-      <section>
-        <h2>Breakfast</h2>
-
-        <h3>Eggslut</h3>
         <p>
-          A casual breakfast spot known for its egg sandwiches. This is a nice
-          option for visitors wanting something quick before exploring Las
-          Vegas.
+          Las Vegas has so many different places to eat, from quick breakfast
+          stops and casual restaurants to seafood, steak, and fine dining. I
+          organized my recommendations by category to make it easier to find
+          something you'll enjoy.
         </p>
+      </div>
+
+      <!-- 8. I added a price guide to help visitors compare restaurants. -->
+      <div class="price-guide">
+        <h2>Price Guide</h2>
+
+        <div class="price-options">
+          <span>$ — Budget-friendly</span>
+          <span>$$ — Moderate</span>
+          <span>$$$ — Expensive</span>
+          <span>$$$$ — Fine Dining</span>
+        </div>
+
+        <p>
+          These are general price ranges to help with planning. Actual prices
+          may vary depending on the menu and what you order.
+        </p>
+      </div>
+
+      <!-- 9. I grouped my breakfast restaurants and bakeries together. -->
+      <section class="menu-section">
+        <h2>Breakfast &amp; Bakeries</h2>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Eggslut</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A casual breakfast spot known for its egg sandwiches. This is a nice
+            option for visitors wanting something quick before exploring Las
+            Vegas.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>1228 Main</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A bakery and restaurant in the Arts District with fresh pastries,
+            breads, and breakfast options. It's a nice place to stop for coffee
+            and something to eat.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>PublicUs</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A café in Downtown Las Vegas serving coffee, breakfast sandwiches,
+            pastries, and other breakfast dishes.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Café Breizh</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A French bakery with croissants, pastries, crêpes, and other baked
+            goods. This is a nice option for visitors who enjoy French desserts
+            and breakfast treats.
+          </p>
+        </div>
       </section>
 
-      <!-- 2. I kept chicken and smashburger places together. -->
-      <section>
-        <h2>Chicken &amp; Burgers</h2>
+      <!-- 10. I added more casual places for chicken, burgers, and American food. -->
+      <section class="menu-section">
+        <h2>Casual, Burgers &amp; Chicken</h2>
 
-        <h3>The Chicken Shack</h3>
-        <p>
-          A casual restaurant serving chicken fingers, wings, and different
-          sauces.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>The Chicken Shack</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A casual restaurant serving chicken fingers, wings, fries, and
+            different sauces.
+          </p>
+        </div>
 
-        <h3>With Love, Always</h3>
-        <p>
-          A burger spot serving smashburgers, fries, and other casual food
-          options.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>With Love, Always</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A burger spot serving smashburgers, fries, and other casual food
+            options. This is a good choice for visitors craving a burger.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Carson Kitchen</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A Downtown Las Vegas restaurant known for creative American dishes
+            and shareable plates. It's a nice place to enjoy a meal with
+            friends.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Gordon Ramsay Burger</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A burger restaurant at Planet Hollywood known for its creative
+            burgers, fries, and milkshakes.
+          </p>
+        </div>
       </section>
 
-      <!-- 3. I included the seafood places I visited during my trip. -->
-      <section>
+      <!-- 11. I kept my seafood favorites and added more upscale options. -->
+      <section class="menu-section">
         <h2>Seafood &amp; Buffets</h2>
 
-        <h3>Hot N Juicy Crawfish</h3>
-        <p>
-          A seafood restaurant where visitors can enjoy seafood boils with
-          different sauces and spice levels.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Hot N Juicy Crawfish</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A seafood restaurant where visitors can enjoy seafood boils with
+            different sauces and spice levels.
+          </p>
+        </div>
 
-        <!-- I included a seafood photo and credited the photographer. -->
-        <figure>
-          <img
-            src="images/seafood.jpg"
-            alt="Seafood boil with crab and corn served in a bowl with bread and lemon wedges"
-            width="500"
-          />
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Imperial Sushi &amp; Seafood Buffet</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A buffet with sushi, seafood, and other dishes. This is a good
+            option for visitors who want a variety of food in one place.
+          </p>
+        </div>
 
-          <figcaption>
-            Example seafood photo by
-            <a
-              href="https://www.pexels.com/photo/delicious-seafood-boil-with-grilled-bread-35896379/"
-            >
-              Mike C
-            </a>
-            on Pexels
-          </figcaption>
-        </figure>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Estiatorio Milos</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            An upscale Mediterranean restaurant known for fresh seafood and
+            Greek-inspired dishes. This is a nice option for a special dinner.
+          </p>
+        </div>
 
-        <h3>Imperial Sushi &amp; Seafood Buffet</h3>
-        <p>
-          A buffet with sushi, seafood, and other dishes. This is a good option
-          for visitors who want a variety of food in one place.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Bacchanal Buffet</h3>
+            <span class="price-level" aria-label="Expensive">$$$</span>
+          </div>
+          <p>
+            A large buffet at Caesars Palace offering seafood, international
+            dishes, and desserts. This is a good choice for visitors who want to
+            try different kinds of food.
+          </p>
+        </div>
       </section>
 
-      <!-- 4. I included Golden Steer for visitors interested in steak. -->
-      <section>
-        <h2>Steak</h2>
+      <!-- 12. I grouped my steakhouses together for special dinners. -->
+      <section class="menu-section">
+        <h2>Steak &amp; Fine Dining</h2>
 
-        <h3>Golden Steer Steakhouse</h3>
-        <p>
-          A classic Las Vegas steakhouse known for its steaks and old-fashioned
-          atmosphere. This is a nice place for visitors who want a special
-          dinner.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Golden Steer Steakhouse</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            A classic Las Vegas steakhouse known for its steaks and
+            old-fashioned atmosphere. This is a nice place for visitors who want
+            a special dinner.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Bazaar Meat by José Andrés</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            An upscale steakhouse at The Palazzo known for its creative meat
+            dishes and unique dining experience. This is a good option for
+            visitors celebrating a special occasion.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Delmonico Steakhouse</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            A steakhouse at The Venetian offering steaks, seafood, and other
+            classic dishes in an upscale dining atmosphere.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Oscar's Steakhouse</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            A steakhouse at the Plaza Hotel in Downtown Las Vegas. Visitors can
+            enjoy steaks and classic American dishes with views of Fremont
+            Street.
+          </p>
+        </div>
       </section>
 
-      <!-- 5. I included restaurants where visitors can enjoy dinner with a view. -->
-      <section>
+      <!-- 13. I kept the restaurants with views in their own category. -->
+      <section class="menu-section">
         <h2>Dinner with a View</h2>
 
-        <h3>Eiffel Tower Restaurant</h3>
-        <p>
-          Enjoy French dining with views of the Las Vegas Strip and Bellagio
-          Fountains.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Eiffel Tower Restaurant</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            Enjoy French dining with views of the Las Vegas Strip and Bellagio
+            Fountains. This is a nice option for a romantic dinner.
+          </p>
+        </div>
 
-        <h3>LAGO</h3>
-        <p>
-          An Italian restaurant at Bellagio where visitors can enjoy their meal
-          with views of the fountains.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>LAGO</h3>
+            <span class="price-level" aria-label="Expensive">$$$</span>
+          </div>
+          <p>
+            An Italian restaurant at Bellagio where visitors can enjoy their
+            meal with views of the fountains.
+          </p>
+        </div>
 
-        <h3>Top of the World</h3>
-        <p>
-          A restaurant at The STRAT that offers views of Las Vegas from a
-          rotating dining room.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Top of the World</h3>
+            <span class="price-level" aria-label="Fine dining">$$$$</span>
+          </div>
+          <p>
+            A restaurant at The STRAT that offers views of Las Vegas from a
+            rotating dining room. This is a unique place for a special dinner.
+          </p>
+        </div>
       </section>
 
-      <!-- 6. I included a dessert place for something sweet. -->
-      <section>
+      <!-- 14. I added different dessert places for cookies, pastries, and milkshakes. -->
+      <section class="menu-section">
         <h2>Desserts</h2>
 
-        <h3>Bake the Cookie Shoppe</h3>
-        <p>
-          A dessert shop with cookies and other sweet treats. This is a nice
-          stop for visitors who want something sweet during their trip.
-        </p>
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Bake the Cookie Shoppe</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A dessert shop known for its cookies and other sweet treats. This is
+            a nice stop for visitors who want something sweet during their trip.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Dominique Ansel Las Vegas</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            A bakery at Caesars Palace known for creative pastries, including
+            the Cronut and other unique desserts. This is a nice option for
+            pastry lovers.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Black Tap CrazyShakes</h3>
+            <span class="price-level" aria-label="Moderate">$$</span>
+          </div>
+          <p>
+            Visit Black Tap at The Venetian for its famous CrazyShake milkshakes
+            topped with candy, cookies, and other sweet treats.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Milk Bar</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A dessert shop at The Cosmopolitan serving cookies, cakes, cake
+            truffles, and soft serve.
+          </p>
+        </div>
+
+        <div class="restaurant-item">
+          <div class="restaurant-heading">
+            <h3>Saint Honoré</h3>
+            <span class="price-level" aria-label="Budget-friendly">$</span>
+          </div>
+          <p>
+            A dessert shop known for its colorful gourmet doughnuts and
+            beignets. This is a fun place to try something sweet.
+          </p>
+        </div>
       </section>
+
+      <!-- 15. I kept the photographer credit for my Las Vegas banner. -->
+      <p class="banner-credit">
+        Banner photo by
+        <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>
+        on
+        <a
+          href="https://unsplash.com/photos/city-with-lights-turned-on-during-night-time-uxU_jyu9e7U"
+        >
+          Unsplash
+        </a>
+      </p>
     </main>
 
+    <!-- 16. I kept my footer consistent with my other pages. -->
     <footer>
       <p>Las Vegas, Your Way | WEB 110</p>
     </footer>

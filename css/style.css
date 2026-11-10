@@ -1,44 +1,85 @@
+
 /* 1. I kept padding and borders inside each element's size. */
 * {
   box-sizing: border-box;
 }
 
-/* 2. I used a white background and dark text for my website. */
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
-  color: #362624;
+/* 2. I used CSS variables to keep my website colors consistent. */
+:root {
+  --primary-color: #362624;
+  --secondary-color: #5e4542;
+  --accent-color: #fdca90;
+  --link-color: #4f687f;
+  --border-color: #d7cfcd;
+  --background-color: #ffffff;
 }
 
-/* 3. I used a dark brown gradient for my header. */
+/* 3. I added smooth scrolling for my Things to Do jump links. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. I kept the same fonts and background on all three pages. */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background-color);
+  color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* 5. I used the same Las Vegas skyline banner on every page. */
 header {
-  padding: 40px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+  padding: 65px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #362624, #5e4542);
   color: #ffffff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../images/vegas-hero.jpg") center / cover no-repeat;
 }
 
 header p {
   margin: 12px 0;
 }
 
-/* 4. I made my website name stand out in white. */
-.site-title {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
-  color: #ffffff;
+header > .site-title,
+header > p,
+header > nav {
+  width: 100%;
 }
 
-/* 5. I styled my navigation links like rounded buttons. */
-nav {
+.site-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+header .site-tagline {
+  margin: 18px 0 28px;
+  font-size: 1.1rem;
+}
+
+.home-page .hero-content {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 6. I kept the navigation buttons dark with a peach hover color. */
+header nav {
   margin-top: 24px;
 }
 
@@ -52,12 +93,13 @@ nav ul {
   list-style: none;
 }
 
-nav a {
+header nav a {
   display: block;
   padding: 10px 18px;
-  border: 2px solid #d7cfcd;
-  border-radius: 24px;
   color: #ffffff;
+  background: var(--primary-color);
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
   font-weight: bold;
   text-decoration: none;
   transition:
@@ -66,21 +108,19 @@ nav a {
     border-color 0.2s ease;
 }
 
-/* 6. I used peach to highlight the current page and hover effect. */
-nav a:hover,
-nav a[aria-current="page"] {
-  background-color: #fdca90;
-  border-color: #fdca90;
-  color: #362624;
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
-/* 7. I added an outline to make keyboard navigation easier to see. */
-nav a:focus-visible {
+header nav a:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: 3px;
 }
 
-/* 8. I centered my main content and added spacing around it. */
+/* 7. I kept my main content centered and my headings easy to read. */
 main {
   flex: 1;
   width: 100%;
@@ -89,11 +129,10 @@ main {
   padding: 36px 20px 48px;
 }
 
-/* 9. I used serif fonts for my headings. */
 h1,
 h2 {
+  color: var(--primary-color);
   font-family: Georgia, "Times New Roman", serif;
-  color: #362624;
 }
 
 h1 {
@@ -102,65 +141,70 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   font-size: 1.5rem;
 }
 
 h3 {
-  margin-top: 24px;
-  margin-bottom: 8px;
+  margin: 24px 0 8px;
   font-size: 1.1rem;
-  color: #362624;
+  color: var(--primary-color);
 }
 
-/* 10. I styled the introduction under each page title. */
 main > p {
   max-width: 760px;
   margin-bottom: 28px;
   font-size: 1.05rem;
-  color: #5e4542;
+  color: var(--secondary-color);
 }
 
-/* 11. I made my sections into white boxes with a blue accent. */
+main a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+main a:hover {
+  color: var(--primary-color);
+}
+
+main a:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #985a36;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* 8. I kept my default sections and pictures organized. */
 section {
   margin: 24px 0;
   padding: 24px;
-  background-color: #ffffff;
-  border: 1px solid #d7cfcd;
-  border-left: 5px solid #4f687f;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--link-color);
   border-radius: 12px;
   box-shadow: 0 5px 16px rgba(54, 38, 36, 0.08);
 }
 
-/* 12. I kept lists organized with enough spacing. */
+section p {
+  margin: 0 0 14px;
+}
+
 section ul {
-  padding-left: 20px;
   margin-top: 12px;
+  padding-left: 20px;
 }
 
 section li {
   margin: 10px 0;
 }
 
-/* 13. I adjusted spacing for paragraphs inside sections. */
-section p {
-  margin-top: 0;
-  margin-bottom: 14px;
-}
-
-/* 14. I used slate blue for links inside my pages. */
-main a {
-  color: #4f687f;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-main a:hover {
-  color: #362624;
-}
-
-/* 15. I made my photos responsive without stretching them. */
 figure {
   margin: 18px 0 24px;
 }
@@ -173,23 +217,21 @@ figure img {
   border-radius: 10px;
 }
 
-/* 16. I kept my photo credits smaller than the main text. */
 figcaption {
   margin-top: 8px;
-  font-size: 0.85rem;
   color: #595961;
+  font-size: 0.85rem;
 }
 
-/* 17. I made my Home page photo larger so it stands out. */
-.hero-image img {
-  max-width: 800px;
+.banner-credit {
+  margin-top: 20px;
+  font-size: 0.85rem;
 }
 
-/* 18. I matched my footer with the colors in my header. */
 footer {
   padding: 22px;
   text-align: center;
-  background-color: #362624;
+  background: var(--primary-color);
   color: #ffffff;
 }
 
@@ -198,99 +240,553 @@ footer p {
   font-weight: bold;
 }
 
-/* 19. I gave my Food & Dining page a menu-inspired design. */
+/* 9. I used Flexbox for my personal story and picture on Home. */
+.home-page .home-intro {
+  max-width: 850px;
+  margin: 30px auto 70px;
+  text-align: center;
+}
+
+.home-page .home-intro h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.home-page .home-intro > p:last-child {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+}
+
+.home-page .story-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  margin: 45px 0 75px;
+  padding: 35px;
+  background: #fbf5f0;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.home-page .story-text,
+.home-page .story-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-page .story-text h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.home-page .story-text p {
+  color: var(--secondary-color);
+}
+
+.home-page .story-image {
+  margin: 0;
+}
+
+.home-page .story-image img {
+  width: 100%;
+  max-width: none;
+  height: 400px;
+  object-fit: cover;
+  object-position: center 45%;
+  border-radius: 12px;
+}
+
+/* 10. I gave the two guide cards the same style and hover effect. */
+.home-page .featured-section {
+  margin: 0 0 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-page .featured-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.home-page .featured-heading h2 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.home-page .featured-heading > p:last-child {
+  color: var(--secondary-color);
+}
+
+.home-page .featured-cards {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.home-page .feature-card {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(54, 38, 36, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.home-page .feature-link {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.home-page .feature-link:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: -3px;
+}
+
+.home-page .feature-image img {
+  width: 100%;
+  max-width: none;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.home-page .feature-content {
+  padding: 22px;
+}
+
+.home-page .feature-category {
+  margin: 0 0 10px;
+  color: #985a36;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home-page .feature-content h3 {
+  margin: 0 0 12px;
+  font: bold 1.5rem Georgia, "Times New Roman", serif;
+}
+
+.home-page .feature-content p {
+  margin-bottom: 18px;
+  color: var(--secondary-color);
+}
+
+.home-page .feature-action {
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+.home-page .feature-credit {
+  margin: 0;
+  padding: 0 22px 18px;
+  color: #595961;
+  font-size: 0.8rem;
+}
+
+.home-page .banner-credit {
+  max-width: none;
+}
+
+/* 11. I used Flexbox and jump links on Things to Do. */
+.activity-page main {
+  max-width: 1100px;
+}
+
+.activity-page .activity-intro {
+  max-width: 800px;
+  margin: 35px auto 32px;
+  text-align: center;
+}
+
+.activity-page .activity-intro h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.activity-page .activity-intro > p:last-child {
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+}
+
+.activity-page .section-jumps {
+  margin: 0 auto 55px;
+}
+
+.activity-page .section-jumps ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.activity-page .section-jumps a {
+  display: block;
+  padding: 11px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  background: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.activity-page .section-jumps a:hover,
+.activity-page .section-jumps a:focus-visible {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.activity-page .section-jumps a:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 3px;
+}
+
+.activity-page .activity-section {
+  margin: 0 0 65px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  scroll-margin-top: 25px;
+}
+
+.activity-page .section-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.activity-page .section-heading h2 {
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.activity-page .section-heading h2::after,
+.dining-page .menu-section h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: var(--accent-color);
+}
+
+.activity-page .section-heading > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--secondary-color);
+}
+
+.activity-page .category-title {
+  margin: 35px 0 22px;
+  text-align: center;
+  color: var(--primary-color);
+  font: bold 1.5rem Georgia, "Times New Roman", serif;
+}
+
+.activity-page .activity-cards,
+.activity-page .category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* 12. I kept the attraction, show, nightlife, and shopping cards consistent. */
+.activity-page .activity-card,
+.activity-page .category-card {
+  flex: 1 1 calc(50% - 12px);
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(54, 38, 36, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.activity-page .activity-card-content,
+.activity-page .category-card-content {
+  padding: 24px;
+}
+
+.activity-page .activity-card h3,
+.activity-page .activity-card h4 {
+  margin: 0 0 12px;
+  color: var(--primary-color);
+  font: bold 1.35rem Georgia, "Times New Roman", serif;
+}
+
+.activity-page .activity-card p,
+.activity-page .category-card p {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.activity-page .activity-card figure,
+.activity-page .category-card figure {
+  margin: 0;
+}
+
+.activity-page .activity-card img,
+.activity-page .category-card img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.activity-page .activity-card figcaption,
+.activity-page .category-card figcaption {
+  margin: 0;
+  padding: 10px 18px 0;
+  color: #595961;
+  font-size: 0.8rem;
+}
+
+.activity-page .category-card h3 {
+  margin: 0 0 20px;
+  color: var(--primary-color);
+  font: bold 1.5rem Georgia, "Times New Roman", serif;
+}
+
+.activity-page .category-card h4 {
+  margin: 20px 0 8px;
+  color: var(--primary-color);
+  font-size: 1.05rem;
+}
+
+.activity-page .category-card h4 + p {
+  margin-bottom: 15px;
+}
+
+.activity-page .section-note {
+  margin: 24px 0 0;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.activity-page .back-to-top {
+  margin: 15px 0 35px;
+  text-align: center;
+}
+
+.activity-page .back-to-top a {
+  font-weight: bold;
+}
+
+/* 13. I adjusted the Neon Museum photo without changing the other pictures. */
+.activity-page .activity-card img.neon-museum-img {
+  object-position: center 65%;
+}
+
+/* I adjusted my ice bar photo to show more of the frozen counter. */
+.activity-page #nightlife .category-card:last-child img {
+  object-position: center bottom;
+}
+
+/* I adjusted my outlets photo so the cars and stores are the focus. */
+.activity-page #shopping .category-card.outlets-card img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* 14. I centered the last nightlife and shopping cards on desktop. */
+@media (min-width: 701px) {
+  .activity-page #nightlife .category-cards,
+  .activity-page #shopping .category-cards {
+    justify-content: center;
+  }
+
+  .activity-page #nightlife .category-card,
+  .activity-page #shopping .category-card {
+    flex: 0 1 calc(50% - 12px);
+  }
+}
+
+/* 15. I made the hover effect work on every card, including Nightlife and Shopping. */
+@media (hover: hover) {
+  .home-page .feature-card:hover,
+  .activity-page .activity-card:hover,
+  .activity-page .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(54, 38, 36, 0.15);
+  }
+}
+
+.activity-page .activity-card:focus-within,
+.activity-page .category-card:focus-within {
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+/* 16. I kept Food & Dining looking like one connected restaurant menu. */
 .dining-page main {
   max-width: 950px;
 }
 
-/* 20. I centered the dining title to make it stand out more. */
-.dining-page h1 {
+.dining-page .dining-intro {
+  max-width: 800px;
+  margin: 30px auto 35px;
   text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 12px;
 }
 
-.dining-page main > p {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 36px;
+.dining-page .dining-intro h1 {
+  margin-bottom: 15px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
 }
 
-/* 21. I made my dining sections look like menu categories. */
-.dining-page section {
-  padding: 30px 36px;
+.dining-page .dining-intro > p:last-child {
+  margin: 0 auto;
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.dining-page .price-guide {
+  margin: 30px 0 40px;
+  padding: 24px;
+  text-align: center;
+  background: #fbf5f0;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.dining-page .price-guide h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.dining-page .price-guide h2::after {
+  display: none;
+}
+
+.dining-page .price-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dining-page .price-options span {
+  padding: 8px 14px;
+  background: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.dining-page .price-guide p {
+  margin: 15px 0 0;
+  color: var(--secondary-color);
+  font-size: 0.85rem;
+}
+
+/* 17. I separated the menu categories with peach lines and even spacing. */
+.dining-page .menu-section {
   margin: 0;
-  background-color: #ffffff;
-  border: 1px solid #d7cfcd;
+  padding: 32px 38px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   border-bottom: none;
   border-radius: 0;
   box-shadow: none;
 }
 
-/* I rounded the top and bottom of my menu. */
-.dining-page section:first-of-type {
-  border-top: 5px solid #362624;
+.dining-page .menu-section:first-of-type {
+  border-top: 5px solid var(--primary-color);
   border-radius: 12px 12px 0 0;
 }
 
-.dining-page section:last-of-type {
-  border-bottom: 5px solid #362624;
+.dining-page .menu-section:last-of-type {
+  border-bottom: 5px solid var(--primary-color);
   border-radius: 0 0 12px 12px;
 }
 
-/* 22. I centered my food categories with a peach line underneath. */
-.dining-page h2 {
+.dining-page .menu-section h2 {
+  margin-bottom: 30px;
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 26px;
 }
 
-.dining-page h2::after {
-  content: "";
-  display: block;
-  width: 75px;
-  height: 3px;
-  background-color: #fdca90;
-  margin: 12px auto 0;
+.dining-page .restaurant-item {
+  padding: 0 0 20px;
+  margin: 0 0 22px;
+  border-bottom: 1px solid #ede5e2;
 }
 
-/* 23. I styled the restaurant names like items on a menu. */
-.dining-page h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.2rem;
-  margin-top: 22px;
-  margin-bottom: 6px;
-  color: #362624;
+.dining-page .restaurant-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
-/* 24. I kept restaurant descriptions smaller with extra spacing. */
-.dining-page section p {
+.dining-page .restaurant-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.dining-page .restaurant-heading h3 {
+  margin: 0 0 8px;
+  color: var(--primary-color);
+  font: bold 1.2rem Georgia, "Times New Roman", serif;
+}
+
+.dining-page .restaurant-item p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--secondary-color);
   font-size: 0.95rem;
-  color: #5e4542;
   line-height: 1.7;
-  margin-bottom: 20px;
 }
 
-/* 25. I centered the seafood picture inside its menu section. */
-.dining-page figure {
-  max-width: 500px;
-  margin: 20px auto 28px;
+.dining-page .price-level {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  color: var(--primary-color);
+  background: var(--accent-color);
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
-.dining-page figure img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+.dining-page .banner-credit {
+  margin-top: 25px;
 }
 
-/* 26. I adjusted my website for smaller screens. */
-@media (max-width: 600px) {
+/* 18. I stacked my cards and navigation on smaller screens. */
+@media (max-width: 700px) {
   header {
-    padding: 28px 16px;
-  }
-
-  .site-title {
-    font-size: 2.2rem;
+    min-height: 350px;
+    padding: 50px 16px;
   }
 
   nav ul {
@@ -302,41 +798,140 @@ footer p {
     padding: 24px 16px 32px;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  .home-page .home-intro {
+    margin: 20px auto 45px;
   }
 
-  h2 {
-    font-size: 1.35rem;
+  .home-page .story-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    margin-bottom: 55px;
+    padding: 24px;
   }
 
-  section {
+  .home-page .story-image img {
+    height: auto;
+  }
+
+  .home-page .featured-cards {
+    flex-direction: column;
+  }
+
+  .activity-page .activity-intro {
+    margin: 20px auto 28px;
+  }
+
+  .activity-page .section-jumps {
+    margin-bottom: 40px;
+  }
+
+  .activity-page .section-jumps ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .activity-page .section-jumps a {
+    padding: 9px 14px;
+    font-size: 0.9rem;
+  }
+
+  .activity-page .activity-section {
+    margin-bottom: 45px;
+  }
+
+  .activity-page .section-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .activity-page .activity-cards,
+  .activity-page .category-cards {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .activity-page .activity-card,
+  .activity-page .category-card {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .activity-page .activity-card-content,
+  .activity-page .category-card-content {
     padding: 20px;
   }
 
-  figure {
-    margin-left: 0;
-    margin-right: 0;
+  .activity-page .activity-card img,
+  .activity-page .category-card img {
+    height: 220px;
   }
 
-  figure img {
-    max-width: 100%;
+  .activity-page .activity-card h4 {
+    font-size: 1.2rem;
   }
 
-  /* I adjusted the menu headings and spacing for smaller screens. */
-  .dining-page h1 {
-    font-size: 2rem;
+  .dining-page .menu-section {
+    padding: 25px 20px;
   }
 
-  .dining-page h2 {
+  .dining-page .menu-section h2 {
     font-size: 1.5rem;
   }
 
-  .dining-page section {
-    padding: 24px 20px;
+  .dining-page .price-guide {
+    padding: 20px 15px;
   }
 
-  .dining-page h3 {
+  .dining-page .restaurant-heading {
+    align-items: flex-start;
+  }
+
+  .dining-page .restaurant-heading h3 {
     font-size: 1.1rem;
+  }
+
+  .dining-page .price-level {
+    padding: 4px 9px;
+  }
+}
+
+/* 19. I kept my layout readable on very small phone screens. */
+@media (max-width: 400px) {
+  header {
+    min-height: 340px;
+    padding: 35px 12px;
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+  }
+
+  header nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .dining-page .menu-section {
+    padding: 22px 15px;
+  }
+}
+
+/* 20. I turned off movement for visitors who prefer less animation. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .home-page .feature-card,
+  .activity-page .activity-card,
+  .activity-page .category-card {
+    transition: none;
+  }
+
+  .home-page .feature-card:hover,
+  .activity-page .activity-card:hover,
+  .activity-page .category-card:hover {
+    transform: none;
   }
 }

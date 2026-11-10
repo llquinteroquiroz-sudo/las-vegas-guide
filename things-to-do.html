@@ -7,212 +7,647 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <!-- I kept my card layout and added an ID for the back to top link. -->
+  <body class="activity-page" id="top">
     <header>
       <p class="site-title">Las Vegas, Your Way</p>
       <p>Delicious food, sweet treats, and a night to remember.</p>
 
       <nav aria-label="Main navigation">
         <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-
+          <li><a href="index.html">Home</a></li>
           <li>
             <a href="things-to-do.html" aria-current="page">
               Things to Do &amp; Entertainment
             </a>
           </li>
-
-          <li>
-            <a href="dining.html">Food &amp; Dining</a>
-          </li>
+          <li><a href="dining.html">Food &amp; Dining</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Things to Do &amp; Entertainment</h1>
+      <!-- 1. I kept my introduction to explain what visitors can explore. -->
+      <div class="activity-intro">
+        <p class="eyebrow">EXPLORE LAS VEGAS</p>
+        <h1>Things to Do &amp; Entertainment</h1>
+        <p>
+          Las Vegas has something for everyone, whether you're interested in
+          sightseeing, watching a show, enjoying the nightlife, or shopping.
+          Explore different places and find activities that interest you during
+          your trip.
+        </p>
+      </div>
 
-      <p>
-        Explore Las Vegas with sightseeing, city views, shows, and nightlife.
+      <!-- 2. I added jump links so visitors can find each category faster. -->
+      <nav class="section-jumps" aria-label="Explore page sections">
+        <ul>
+          <li><a href="#attractions">Attractions</a></li>
+          <li><a href="#shows">Shows</a></li>
+          <li><a href="#nightlife">Nightlife</a></li>
+          <li><a href="#shopping">Shopping</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. I organized my sightseeing places into cards with pictures. -->
+      <section class="activity-section" id="attractions">
+        <div class="section-heading">
+          <p class="eyebrow">DISCOVER THE CITY</p>
+          <h2>Sightseeing &amp; Attractions</h2>
+          <p>
+            From famous landmarks to unique experiences, these are some places
+            worth exploring around Las Vegas.
+          </p>
+        </div>
+
+        <div class="activity-cards">
+          <!-- I added a picture of the Las Vegas Strip at night. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/las-vegas-strip.jpg"
+                alt="Las Vegas Strip at night with illuminated hotels, palm trees, and traffic light trails"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/vibrant-nightlife-in-las-vegas-nevada-36015098/"
+                >
+                  David Vives
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>The Las Vegas Strip</h3>
+              <p>
+                Walk along the Strip and explore its hotels, shops, and
+                attractions. Choose a few stops that interest you and leave time
+                to look around.
+              </p>
+            </div>
+          </article>
+
+          <!-- I changed my Fremont Street picture and updated the credit. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/freemont-casino.jpg"
+                alt="Fremont Casino illuminated with bright red neon lights in downtown Las Vegas"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/vibrant-night-scene-of-fremont-casino-in-las-vegas-32760139/"
+                >
+                  Allen Boguslavsky
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>Fremont Street</h3>
+              <p>
+                Head downtown to Fremont Street for lights, music, and
+                nightlife. Spend some time walking around and taking in the
+                atmosphere.
+              </p>
+            </div>
+          </article>
+
+          <!-- I kept my Bellagio Fountains picture from Module 10. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/bellagio-fountains.jpg"
+                alt="Bellagio Fountains performing at night with illuminated hotels in the background"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/bellagio-fountain-show-28207239/"
+                >
+                  Eugenio Felix
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>Bellagio Fountains</h3>
+              <p>
+                Stop outside Bellagio to watch the fountains move along with
+                music and lights. This free attraction is a fun stop while
+                exploring the Strip.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added a picture of the High Roller observation wheel. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/high-roller-vegas.jpg"
+                alt="High Roller observation wheel above The LINQ Promenade with palm trees, shops, and visitors"
+              />
+              <figcaption>
+                Photo by
+                <a href="https://www.pexels.com/photo/people-walking-2316781/">
+                  Prime Cinematics
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>High Roller at The LINQ</h3>
+              <p>
+                Take a ride on the High Roller for views of Las Vegas from
+                above. The observation wheel takes about 30 minutes to complete
+                one rotation, giving you time to enjoy the scenery.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added a picture of the indoor gondola rides at The Venetian. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/gondola-rides-vegas.jpg"
+                alt="Gondolier guiding a gondola through the indoor canal at The Venetian in Las Vegas"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/gondola-ride-inside-the-venetian-las-vegas-36567837/"
+                >
+                  Petra Nesti
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>Gondola Rides at The Venetian</h3>
+              <p>
+                Ride along the canal at The Venetian with a singing gondolier.
+                The resort offers indoor rides through the Grand Canal Shoppes
+                and outdoor rides when the season and weather allow.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added an AREA15 picture for my Omega Mart recommendation. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/omega-mart-vegas.jpg"
+                alt="AREA15 sign surrounded by neon artwork and purple lighting"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/art-dark-neon-desktop-5688147/"
+                >
+                  Promote365 .xyz
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>Omega Mart at AREA15</h3>
+              <p>
+                Explore an interactive art experience that looks like a grocery
+                store but has hidden rooms, colorful displays, and unexpected
+                surprises throughout.
+              </p>
+            </div>
+          </article>
+
+          <!-- I adjusted my Neon Museum picture to focus on the guitar sign. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                class="neon-museum-img"
+                src="images/the-neon-museum.jpg"
+                alt="Large vintage Hard Rock Cafe guitar sign displayed outdoors at the Neon Museum in Las Vegas"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/iconic-hard-rock-cafe-guitar-sign-in-neon-museum-29698143/"
+                >
+                  Rufina Rusakova
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>The Neon Museum</h3>
+              <p>
+                Visit the Neon Museum to see old Las Vegas signs and learn more
+                about the city's history. It is also a nice place to take
+                pictures and explore something different from the Strip.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added the Bellagio Conservatory as another free attraction. -->
+          <article class="activity-card">
+            <figure>
+              <img
+                src="images/the-bellagio-inside.jpg"
+                alt="Colorful floral carousel horses surrounded by flowers inside the Bellagio Conservatory"
+              />
+              <figcaption>
+                Photo by
+                <a
+                  href="https://www.pexels.com/photo/floral-carousel-in-las-vegas-conservatory-display-36567834/"
+                >
+                  Petra Nesti
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="activity-card-content">
+              <h3>Bellagio Conservatory &amp; Botanical Gardens</h3>
+              <p>
+                Explore beautiful floral displays inside Bellagio. The
+                conservatory features colorful flowers, creative decorations,
+                and seasonal themes throughout the year. It's another nice free
+                attraction to visit.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. I expanded my shows to include more Cirque du Soleil performances. -->
+      <section class="activity-section" id="shows">
+        <div class="section-heading">
+          <p class="eyebrow">A NIGHT TO REMEMBER</p>
+          <h2>Shows &amp; Entertainment</h2>
+          <p>
+            From famous Cirque du Soleil performances to magic and comedy, Las
+            Vegas has plenty of shows to enjoy during your trip.
+          </p>
+        </div>
+
+        <!-- I grouped my Cirque du Soleil shows together. -->
+        <h3 class="category-title">Cirque du Soleil</h3>
+
+        <div class="activity-cards">
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>"O" at Bellagio</h4>
+              <p>
+                A water-based performance featuring acrobatics, diving, artistic
+                swimming, and impressive stage effects.
+              </p>
+            </div>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>Michael Jackson ONE at Mandalay Bay</h4>
+              <p>
+                A performance combining Michael Jackson's music with dancing,
+                acrobatics, and colorful visual effects.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added KÀ as another famous Las Vegas show. -->
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>KÀ at MGM Grand</h4>
+              <p>
+                An action-filled show featuring aerial acrobatics, martial arts,
+                and a moving stage that creates exciting scenes.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added Mystère for visitors who enjoy circus performances. -->
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>Mystère at Treasure Island</h4>
+              <p>
+                A colorful performance featuring acrobatics, comedy, creative
+                costumes, and music.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- I kept my other entertainment options separate. -->
+        <h3 class="category-title">More Shows to Experience</h3>
+
+        <div class="activity-cards">
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>Absinthe at Caesars Palace</h4>
+              <p>
+                An adult-oriented show featuring acrobatics, comedy, and live
+                entertainment. This is a good option for visitors who enjoy
+                something a little different.
+              </p>
+            </div>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>Mat Franco: Magic Reinvented Nightly</h4>
+              <p>
+                Enjoy a magic show at The LINQ featuring illusions, creative
+                tricks, and audience interaction.
+              </p>
+            </div>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card-content">
+              <h4>Sphere</h4>
+              <p>
+                Experience entertainment at Sphere, a venue known for its large
+                screens, impressive visuals, and immersive shows.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. I organized nightlife into clubs, lounges, and unique experiences. -->
+      <section class="activity-section" id="nightlife">
+        <div class="section-heading">
+          <p class="eyebrow">AFTER DARK</p>
+          <h2>Clubs &amp; Nightlife</h2>
+          <p>
+            Las Vegas offers different ways to enjoy the evening, whether you
+            want to dance, relax with a view, or try something unique.
+          </p>
+        </div>
+
+        <div class="category-cards">
+          <!-- I used one nightclub picture for the three clubs I included. -->
+          <article class="category-card">
+            <figure>
+              <img
+                src="images/vegas-nightclubs.jpg"
+                alt="Crowded nightclub with bright yellow lights, smoke effects, and people dancing"
+              />
+              <figcaption>
+                Example nightclub photo by
+                <a
+                  href="https://www.pexels.com/photo/people-dancing-in-the-club-4306898/"
+                >
+                  Zachary DeBottis
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Famous Nightclubs</h3>
+
+              <h4>OMNIA at Caesars Palace</h4>
+              <p>
+                A popular nightclub known for its large moving chandelier, DJs,
+                dancing, and VIP experiences.
+              </p>
+
+              <h4>XS at Encore</h4>
+              <p>
+                A luxurious nightclub with music, DJs, and indoor and outdoor
+                party areas.
+              </p>
+
+              <h4>Zouk at Resorts World</h4>
+              <p>
+                A nightclub with live DJs, colorful lighting, and plenty of
+                music and dancing.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added a rooftop bar picture to go with my lounge recommendations. -->
+          <article class="category-card">
+            <figure>
+              <img
+                src="images/rooftop-bar.jpg"
+                alt="Modern rooftop bar with hanging gold decorations, flowers, and warm lighting at dusk"
+              />
+              <figcaption>
+                Example rooftop bar photo by
+                <a
+                  href="https://www.pexels.com/photo/stylish-rooftop-bar-at-dusk-with-modern-decor-40041432/"
+                >
+                  Flávio Nascimento
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Rooftop Bars &amp; Lounges</h3>
+
+              <h4>Legacy Club at Circa</h4>
+              <p>
+                A rooftop lounge with views of Downtown Las Vegas and an outdoor
+                area with fire pits.
+              </p>
+
+              <h4>Skyfall Rooftop Bar &amp; Lounge</h4>
+              <p>
+                An upscale lounge with views of the Las Vegas Strip. This is a
+                nice option for visitors who want a more relaxed evening.
+              </p>
+            </div>
+          </article>
+
+          <!-- I added an ice bar picture for another nightlife experience. -->
+          <article class="category-card">
+            <figure>
+              <img
+                src="images/ice-bar.jpg"
+                alt="Blue illuminated ice bar with bottles and glasses displayed on shelves made of ice"
+              />
+              <figcaption>
+                Example ice bar photo by
+                <a
+                  href="https://www.pexels.com/photo/drink-bottles-on-ice-shelves-in-a-blue-light-19658255/"
+                >
+                  William Warby
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Unique Nightlife Experiences</h3>
+
+              <h4>minus5° Ice Experience</h4>
+              <p>
+                Try something different at an ice bar where the walls,
+                furniture, and sculptures are made of ice. It's a fun place to
+                take pictures and experience something different from a regular
+                nightclub.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- I included a reminder to check nightclub details before visiting. -->
+        <p class="section-note">
+          Nightclub entry rules, dress codes, prices, and event schedules can
+          vary, so check before visiting.
+        </p>
+      </section>
+
+      <!-- 6. I grouped my shopping places into three different categories. -->
+      <section class="activity-section" id="shopping">
+        <div class="section-heading">
+          <p class="eyebrow">SHOPPING &amp; SOUVENIRS</p>
+          <h2>Places to Shop</h2>
+          <p>
+            Explore luxury malls, specialty stores, outlets, and markets while
+            visiting Las Vegas.
+          </p>
+        </div>
+
+        <div class="category-cards">
+          <!-- I grouped my designer stores together for luxury shopping. -->
+          <article class="category-card">
+            <figure>
+              <img
+                src="images/luxury-shopping-vegas.jpg"
+                alt="Elegant shopping mall interior with large statues, decorative ceilings, and stairways"
+              />
+              <figcaption>
+                Shopping mall photo by
+                <a
+                  href="https://www.pexels.com/photo/elegant-interior-of-a-luxurious-shopping-mall-40017562/"
+                >
+                  Aleksandr Poklad
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Luxury Shopping</h3>
+
+              <h4>The Forum Shops at Caesars Palace</h4>
+              <p>
+                Explore a shopping center with designer stores, restaurants, and
+                Roman-inspired architecture. This is a nice option for luxury
+                shopping.
+              </p>
+
+              <h4>The Shops at Crystals</h4>
+              <p>
+                Explore a luxury shopping center on the Strip with designer
+                stores like Gucci, Louis Vuitton, and Prada.
+              </p>
+            </div>
+          </article>
+
+          <!-- I kept the fun souvenir stores in one category. -->
+          <article class="category-card">
+            <figure>
+              <img
+                src="images/specialty-stores.jpg"
+                alt="Hard Rock Cafe storefront in Las Vegas illuminated with colorful neon lights at night"
+              />
+              <figcaption>
+                Las Vegas storefront photo by
+                <a
+                  href="https://www.pexels.com/photo/hard-rock-cafe-in-las-vegas-5402908/"
+                >
+                  David Vives
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Specialty Stores &amp; Souvenirs</h3>
+
+              <h4>Coca-Cola Store</h4>
+              <p>
+                Stop at the Coca-Cola Store for branded clothing, gifts, and
+                souvenirs. Take a look around while exploring the Strip.
+              </p>
+
+              <h4>Hershey's Chocolate World</h4>
+              <p>
+                Visit Hershey's Chocolate World at New York-New York for
+                chocolate, sweet treats, and souvenirs. Pick something for
+                yourself or bring a gift home.
+              </p>
+            </div>
+          </article>
+
+          <!-- I adjusted my outlets picture to show more of the cars and stores. -->
+          <article class="category-card outlets-card">
+            <figure>
+              <img
+                src="images/vegas-outlets.jpg"
+                alt="Las Vegas area parking lot with palm trees and mountains in the distance"
+              />
+              <figcaption>
+                Las Vegas area photo by
+                <a
+                  href="https://www.pexels.com/photo/desert-oasis-palm-trees-in-las-vegas-parking-lot-30070957/"
+                >
+                  Vitor Milanez
+                </a>
+                on Pexels
+              </figcaption>
+            </figure>
+
+            <div class="category-card-content">
+              <h3>Outlets &amp; Markets</h3>
+
+              <h4>Las Vegas North Premium Outlets</h4>
+              <p>
+                Shop at an outdoor outlet with a variety of popular brands,
+                clothing, shoes, and accessories. This is a good option for
+                visitors looking for deals.
+              </p>
+
+              <h4>Broadacres Marketplace</h4>
+              <p>
+                Visit an outdoor swap meet in North Las Vegas with different
+                vendors selling clothes, shoes, gifts, and other items. Visitors
+                can also enjoy food and live music while shopping.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 7. I kept my link so visitors can return to the top of the page. -->
+      <p class="back-to-top">
+        <a href="#top">Back to top &uarr;</a>
       </p>
 
-      <!-- 1. I kept my original sightseeing places together in one section. -->
-      <section>
-        <h2>Sightseeing &amp; Attractions</h2>
-
-        <h3>The Las Vegas Strip</h3>
-        <p>
-          Walk along the Strip and explore its hotels, shops, and attractions.
-          Choose a few stops that interest you and leave time to look around.
-        </p>
-
-        <h3>Fremont Street</h3>
-        <p>
-          Head downtown to Fremont Street for lights, music, and nightlife.
-          Spend some time walking around and taking in the atmosphere.
-        </p>
-
-        <!-- 2. I included a picture of Fremont Street and credited the photographer. -->
-        <figure>
-          <img
-            src="images/fremont-street.jpg"
-            alt="Colorful LED canopy above Fremont Street in downtown Las Vegas"
-            width="500"
-          />
-
-          <figcaption>
-            Photo by
-            <a href="https://unsplash.com/@thielypics">Thierry K</a>
-            on
-            <a
-              href="https://unsplash.com/photos/a-brightly-lit-shopping-mall-with-a-colorful-sky-painted-on-the-ceiling-mC9wZIPlfWc"
-            >
-              Unsplash
-            </a>
-          </figcaption>
-        </figure>
-
-        <h3>Bellagio Fountains</h3>
-        <p>
-          Stop outside Bellagio to watch the fountains move along with music and
-          lights. This free attraction is a fun stop to include while exploring
-          the Strip.
-        </p>
-
-        <!-- 3. I included a picture of the Bellagio Fountains and credited the photographer. -->
-        <figure>
-          <img
-            src="images/bellagio-fountains.jpg"
-            alt="Bellagio Fountains performing at night with the Bellagio and Caesars Palace hotels in the background"
-            width="500"
-          />
-
-          <figcaption>
-            Photo by
-            <a
-              href="https://www.pexels.com/photo/bellagio-fountain-show-28207239/"
-            >
-              Eugenio Felix
-            </a>
-            on Pexels
-          </figcaption>
-        </figure>
-
-        <h3>High Roller at The LINQ</h3>
-        <p>
-          Take a ride on the High Roller for views of Las Vegas from above. The
-          observation wheel takes about 30 minutes to complete one rotation,
-          giving you time to enjoy the scenery.
-        </p>
-
-        <h3>Gondola Rides at The Venetian</h3>
-        <p>
-          Ride along the canal at The Venetian with a singing gondolier. The
-          resort offers indoor rides through the Grand Canal Shoppes and outdoor
-          rides when the season and weather allow.
-        </p>
-
-        <!-- 4. I added Omega Mart as another attraction for visitors to explore. -->
-        <h3>Omega Mart at AREA15</h3>
-        <p>
-          Explore an interactive art experience that looks like a grocery store
-          but has hidden rooms, colorful displays, and unexpected surprises
-          throughout.
-        </p>
-
-        <!-- 5. I added the Neon Museum for visitors interested in Las Vegas history. -->
-        <h3>The Neon Museum</h3>
-        <p>
-          Visit the Neon Museum to see old Las Vegas signs and learn more about
-          the city's history. It is also a nice place to take pictures and
-          explore something different from the Strip.
-        </p>
-      </section>
-
-      <!-- 6. I combined my original Entertainment page with Things to Do. -->
-      <section>
-        <h2>Shows &amp; Entertainment</h2>
-
-        <p>
-          Find ideas for an evening out, whether you want to see a show or
-          experience something different.
-        </p>
-
-        <ul>
-          <li>"O" at Bellagio</li>
-          <li>Michael Jackson ONE at Mandalay Bay</li>
-          <li>Absinthe at Caesars Palace</li>
-          <li>Mat Franco: Magic Reinvented Nightly at The LINQ</li>
-        </ul>
-
-        <!-- 7. I included Sphere as another entertainment experience. -->
-        <h3>Sphere</h3>
-        <p>
-          Experience entertainment at Sphere, a venue known for its large
-          screens, impressive visuals, and immersive shows.
-        </p>
-      </section>
-
-      <!-- 8. I kept the nightlife ideas from my original Entertainment page. -->
-      <section>
-        <h2>Clubs &amp; Nightlife</h2>
-
-        <p>
-          Keep the night going with a visit to a club or an ice bar experience.
-        </p>
-      </section>
-
-      <!-- 9. I moved my shopping places here to keep my website at three pages. -->
-      <section>
-        <h2>Shopping &amp; Souvenirs</h2>
-
-        <h3>Coca-Cola Store</h3>
-        <p>
-          Stop at the Coca-Cola Store for branded clothing, gifts, and
-          souvenirs. Take a look around while exploring the Strip.
-        </p>
-
-        <h3>Hershey's Chocolate World</h3>
-        <p>
-          Visit Hershey's Chocolate World at New York-New York for chocolate,
-          sweet treats, and souvenirs. Pick something for yourself or bring a
-          gift home for someone else.
-        </p>
-
-        <!-- 10. I included Forum Shops for visitors interested in luxury shopping. -->
-        <h3>The Forum Shops at Caesars Palace</h3>
-        <p>
-          Explore a shopping center with designer stores, restaurants, and
-          Roman-inspired architecture. This is a nice option for visitors who
-          want to spend a little extra while shopping.
-        </p>
-
-        <!-- 11. I added another mall for more luxury shopping options. -->
-        <h3>The Shops at Crystals</h3>
-        <p>
-          Explore a luxury shopping center on the Strip with designer stores
-          like Gucci, Louis Vuitton, and Prada. This is another option for
-          visitors who enjoy high-end shopping.
-        </p>
-
-        <!-- 12. I included an outlet for visitors looking for deals. -->
-        <h3>Las Vegas North Premium Outlets</h3>
-        <p>
-          Shop at an outdoor outlet with a variety of popular brands, clothing,
-          shoes, and accessories. This is a good place for visitors who want to
-          find deals while shopping.
-        </p>
-
-        <!-- 13. I included a swap meet for a different shopping experience. -->
-        <h3>Broadacres Marketplace</h3>
-        <p>
-          Visit an outdoor swap meet in North Las Vegas with different vendors
-          selling clothes, shoes, gifts, and other items. Visitors can also
-          enjoy food and live music while shopping.
-        </p>
-      </section>
+      <!-- 8. I kept the credit for my Las Vegas photo banner. -->
+      <p class="banner-credit">
+        Banner photo by
+        <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>
+        on
+        <a
+          href="https://unsplash.com/photos/city-with-lights-turned-on-during-night-time-uxU_jyu9e7U"
+        >
+          Unsplash
+        </a>
+      </p>
     </main>
 
     <footer>
