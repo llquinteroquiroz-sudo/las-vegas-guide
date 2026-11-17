@@ -14,6 +14,9 @@
   </head>
 
   <body class="home-page">
+    <!-- Module 12: I added a skip link to make keyboard navigation easier. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- 5. I kept my Las Vegas photo banner and navigation. -->
     <header>
       <div class="hero-content">
@@ -24,25 +27,21 @@
 
         <nav aria-label="Main navigation">
           <ul>
-            <li>
-              <a href="index.html" aria-current="page">Home</a>
-            </li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li>
               <a href="things-to-do.html"> Things to Do &amp; Entertainment </a>
             </li>
-            <li>
-              <a href="dining.html">Food &amp; Dining</a>
-            </li>
+            <li><a href="dining.html">Food &amp; Dining</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- 6. I added a welcome section with more space and a short introduction. -->
+    <!-- Module 12: I added an ID so my skip link goes to the main content. -->
+    <main id="main-content" tabindex="-1">
+      <!-- 6. I added a welcome section with a short introduction. -->
       <div class="home-intro">
         <p class="eyebrow">WELCOME TO LAS VEGAS</p>
-
         <h1>Explore Las Vegas Your Way</h1>
 
         <p>
@@ -59,7 +58,6 @@
       <section class="story-section">
         <div class="story-text">
           <p class="eyebrow">THE STORY BEHIND THE GUIDE</p>
-
           <h2>Why I Made This Guide</h2>
 
           <p>
@@ -86,7 +84,6 @@
             src="images/kikoandivegas.jpg"
             alt="My boyfriend and me standing together in front of purple hanging lights during our Las Vegas trip"
           />
-
           <figcaption>Photo from my personal Las Vegas trip.</figcaption>
         </figure>
       </section>
@@ -95,9 +92,7 @@
       <section class="featured-section">
         <div class="featured-heading">
           <p class="eyebrow">PLAN YOUR TRIP</p>
-
           <h2>Explore the Guide</h2>
-
           <p>
             Whether you're looking for things to do or places to eat, find ideas
             to help you plan your Las Vegas trip.
@@ -117,14 +112,11 @@
 
               <div class="feature-content">
                 <p class="feature-category">ATTRACTIONS &amp; ENTERTAINMENT</p>
-
                 <h3>Things to Do</h3>
-
                 <p>
                   Explore attractions, shows, nightlife, and shopping throughout
                   Las Vegas.
                 </p>
-
                 <span class="feature-action"> Explore Attractions &rarr; </span>
               </div>
             </a>
@@ -152,14 +144,11 @@
 
               <div class="feature-content">
                 <p class="feature-category">FOOD &amp; DINING</p>
-
                 <h3>Find Your Next Meal</h3>
-
                 <p>
                   Discover casual meals, seafood, desserts, and restaurants for
                   a special dinner.
                 </p>
-
                 <span class="feature-action"> Explore Dining &rarr; </span>
               </div>
             </a>

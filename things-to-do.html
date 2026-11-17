@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <!-- I kept my card layout and added an ID for the back to top link. -->
   <body class="activity-page" id="top">
+    <!-- I added a skip link to make keyboard navigation easier. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
       <p class="site-title">Las Vegas, Your Way</p>
       <p>Delicious food, sweet treats, and a night to remember.</p>
@@ -26,8 +28,8 @@
       </nav>
     </header>
 
-    <main>
-      <!-- 1. I kept my introduction to explain what visitors can explore. -->
+    <!-- I added an ID so the skip link goes to my main content. -->
+    <main id="main-content" tabindex="-1">
       <div class="activity-intro">
         <p class="eyebrow">EXPLORE LAS VEGAS</p>
         <h1>Things to Do &amp; Entertainment</h1>
@@ -39,7 +41,7 @@
         </p>
       </div>
 
-      <!-- 2. I added jump links so visitors can find each category faster. -->
+      <!-- I added jump links so visitors can find each category faster. -->
       <nav class="section-jumps" aria-label="Explore page sections">
         <ul>
           <li><a href="#attractions">Attractions</a></li>
@@ -49,7 +51,7 @@
         </ul>
       </nav>
 
-      <!-- 3. I organized my sightseeing places into cards with pictures. -->
+      <!-- I organized my sightseeing places into cards with pictures. -->
       <section class="activity-section" id="attractions">
         <div class="section-heading">
           <p class="eyebrow">DISCOVER THE CITY</p>
@@ -61,7 +63,6 @@
         </div>
 
         <div class="activity-cards">
-          <!-- I added a picture of the Las Vegas Strip at night. -->
           <article class="activity-card">
             <figure>
               <img
@@ -89,7 +90,6 @@
             </div>
           </article>
 
-          <!-- I changed my Fremont Street picture and updated the credit. -->
           <article class="activity-card">
             <figure>
               <img
@@ -117,7 +117,6 @@
             </div>
           </article>
 
-          <!-- I kept my Bellagio Fountains picture from Module 10. -->
           <article class="activity-card">
             <figure>
               <img
@@ -145,7 +144,6 @@
             </div>
           </article>
 
-          <!-- I added a picture of the High Roller observation wheel. -->
           <article class="activity-card">
             <figure>
               <img
@@ -171,7 +169,6 @@
             </div>
           </article>
 
-          <!-- I added a picture of the indoor gondola rides at The Venetian. -->
           <article class="activity-card">
             <figure>
               <img
@@ -199,7 +196,6 @@
             </div>
           </article>
 
-          <!-- I added an AREA15 picture for my Omega Mart recommendation. -->
           <article class="activity-card">
             <figure>
               <img
@@ -227,7 +223,6 @@
             </div>
           </article>
 
-          <!-- I adjusted my Neon Museum picture to focus on the guitar sign. -->
           <article class="activity-card">
             <figure>
               <img
@@ -256,7 +251,6 @@
             </div>
           </article>
 
-          <!-- I added the Bellagio Conservatory as another free attraction. -->
           <article class="activity-card">
             <figure>
               <img
@@ -287,7 +281,7 @@
         </div>
       </section>
 
-      <!-- 4. I expanded my shows to include more Cirque du Soleil performances. -->
+      <!-- I grouped my shows to make the section easier to follow. -->
       <section class="activity-section" id="shows">
         <div class="section-heading">
           <p class="eyebrow">A NIGHT TO REMEMBER</p>
@@ -298,7 +292,6 @@
           </p>
         </div>
 
-        <!-- I grouped my Cirque du Soleil shows together. -->
         <h3 class="category-title">Cirque du Soleil</h3>
 
         <div class="activity-cards">
@@ -322,7 +315,6 @@
             </div>
           </article>
 
-          <!-- I added KÀ as another famous Las Vegas show. -->
           <article class="activity-card">
             <div class="activity-card-content">
               <h4>KÀ at MGM Grand</h4>
@@ -333,7 +325,6 @@
             </div>
           </article>
 
-          <!-- I added Mystère for visitors who enjoy circus performances. -->
           <article class="activity-card">
             <div class="activity-card-content">
               <h4>Mystère at Treasure Island</h4>
@@ -345,7 +336,6 @@
           </article>
         </div>
 
-        <!-- I kept my other entertainment options separate. -->
         <h3 class="category-title">More Shows to Experience</h3>
 
         <div class="activity-cards">
@@ -382,7 +372,7 @@
         </div>
       </section>
 
-      <!-- 5. I organized nightlife into clubs, lounges, and unique experiences. -->
+      <!-- I organized nightlife into clubs, lounges, and unique experiences. -->
       <section class="activity-section" id="nightlife">
         <div class="section-heading">
           <p class="eyebrow">AFTER DARK</p>
@@ -394,7 +384,6 @@
         </div>
 
         <div class="category-cards">
-          <!-- I used one nightclub picture for the three clubs I included. -->
           <article class="category-card">
             <figure>
               <img
@@ -435,7 +424,6 @@
             </div>
           </article>
 
-          <!-- I added a rooftop bar picture to go with my lounge recommendations. -->
           <article class="category-card">
             <figure>
               <img
@@ -470,7 +458,6 @@
             </div>
           </article>
 
-          <!-- I added an ice bar picture for another nightlife experience. -->
           <article class="category-card">
             <figure>
               <img
@@ -502,14 +489,13 @@
           </article>
         </div>
 
-        <!-- I included a reminder to check nightclub details before visiting. -->
         <p class="section-note">
           Nightclub entry rules, dress codes, prices, and event schedules can
           vary, so check before visiting.
         </p>
       </section>
 
-      <!-- 6. I grouped my shopping places into three different categories. -->
+      <!-- I grouped my shopping places into three different categories. -->
       <section class="activity-section" id="shopping">
         <div class="section-heading">
           <p class="eyebrow">SHOPPING &amp; SOUVENIRS</p>
@@ -521,7 +507,6 @@
         </div>
 
         <div class="category-cards">
-          <!-- I grouped my designer stores together for luxury shopping. -->
           <article class="category-card">
             <figure>
               <img
@@ -557,7 +542,6 @@
             </div>
           </article>
 
-          <!-- I kept the fun souvenir stores in one category. -->
           <article class="category-card">
             <figure>
               <img
@@ -632,12 +616,10 @@
         </div>
       </section>
 
-      <!-- 7. I kept my link so visitors can return to the top of the page. -->
       <p class="back-to-top">
         <a href="#top">Back to top &uarr;</a>
       </p>
 
-      <!-- 8. I kept the credit for my Las Vegas photo banner. -->
       <p class="banner-credit">
         Banner photo by
         <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>

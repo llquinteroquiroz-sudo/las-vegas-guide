@@ -1,30 +1,23 @@
 <!doctype html>
-<!-- 1. I set up my page with HTML5 and English. -->
 <html lang="en">
   <head>
-    <!-- 2. I made sure my website works on different screen sizes. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- 3. I added the title for my browser tab. -->
     <title>Food &amp; Dining | Las Vegas, Your Way</title>
-
-    <!-- 4. I linked my stylesheet to the page. -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <!-- 5. I kept this class so my dining page can have its own menu design. -->
   <body class="dining-page">
+    <!-- I added a skip link to make keyboard navigation easier. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
       <p class="site-title">Las Vegas, Your Way</p>
       <p>Delicious food, sweet treats, and a night to remember.</p>
 
-      <!-- 6. I kept my navigation connected to all three pages. -->
       <nav aria-label="Main navigation">
         <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
+          <li><a href="index.html">Home</a></li>
           <li>
             <a href="things-to-do.html"> Things to Do &amp; Entertainment </a>
           </li>
@@ -35,8 +28,8 @@
       </nav>
     </header>
 
-    <main>
-      <!-- 7. I added an introduction to explain my restaurant recommendations. -->
+    <!-- I added an ID so the skip link goes to my main content. -->
+    <main id="main-content" tabindex="-1">
       <div class="dining-intro">
         <p class="eyebrow">EXPLORE THE FLAVORS OF LAS VEGAS</p>
         <h1>Food &amp; Dining</h1>
@@ -49,7 +42,7 @@
         </p>
       </div>
 
-      <!-- 8. I added a price guide to help visitors compare restaurants. -->
+      <!-- I added a price guide to help visitors compare restaurants. -->
       <div class="price-guide">
         <h2>Price Guide</h2>
 
@@ -66,7 +59,7 @@
         </p>
       </div>
 
-      <!-- 9. I grouped my breakfast restaurants and bakeries together. -->
+      <!-- I grouped my breakfast restaurants and bakeries together. -->
       <section class="menu-section">
         <h2>Breakfast &amp; Bakeries</h2>
 
@@ -118,7 +111,7 @@
         </div>
       </section>
 
-      <!-- 10. I added more casual places for chicken, burgers, and American food. -->
+      <!-- I added casual places for chicken, burgers, and American food. -->
       <section class="menu-section">
         <h2>Casual, Burgers &amp; Chicken</h2>
 
@@ -168,7 +161,7 @@
         </div>
       </section>
 
-      <!-- 11. I kept my seafood favorites and added more upscale options. -->
+      <!-- I kept my seafood favorites and added more upscale options. -->
       <section class="menu-section">
         <h2>Seafood &amp; Buffets</h2>
 
@@ -218,7 +211,7 @@
         </div>
       </section>
 
-      <!-- 12. I grouped my steakhouses together for special dinners. -->
+      <!-- I grouped my steakhouses together for special dinners. -->
       <section class="menu-section">
         <h2>Steak &amp; Fine Dining</h2>
 
@@ -270,7 +263,7 @@
         </div>
       </section>
 
-      <!-- 13. I kept the restaurants with views in their own category. -->
+      <!-- I kept the restaurants with views in their own category. -->
       <section class="menu-section">
         <h2>Dinner with a View</h2>
 
@@ -308,7 +301,7 @@
         </div>
       </section>
 
-      <!-- 14. I added different dessert places for cookies, pastries, and milkshakes. -->
+      <!-- I included different dessert places for cookies, pastries, and milkshakes. -->
       <section class="menu-section">
         <h2>Desserts</h2>
 
@@ -369,7 +362,6 @@
         </div>
       </section>
 
-      <!-- 15. I kept the photographer credit for my Las Vegas banner. -->
       <p class="banner-credit">
         Banner photo by
         <a href="https://unsplash.com/@julianpaefgen"> Julian Paefgen </a>
@@ -382,7 +374,6 @@
       </p>
     </main>
 
-    <!-- 16. I kept my footer consistent with my other pages. -->
     <footer>
       <p>Las Vegas, Your Way | WEB 110</p>
     </footer>
