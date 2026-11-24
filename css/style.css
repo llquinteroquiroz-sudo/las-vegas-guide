@@ -969,3 +969,19 @@ footer p {
     transform: none;
   }
 }
+
+
+/* Module 13: I used CSS Grid to organize my attraction cards. */
+.activity-page #attractions .activity-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* I kept my attraction cards in one column on smaller screens. */
+@media (max-width: 700px) {
+  .activity-page #attractions .activity-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
